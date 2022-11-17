@@ -1,0 +1,13 @@
+@keyframes AnimateBG { 
+    0%{background-color:#ffffff}
+    100%{background-color:#ff6961}
+}
+
+li a.active{ 
+background-color:#ff6961;
+color: #ffffff;   
+animation: AnimateBG 1s ease-in alternate;    
+}
+li  a {
+padding-left:10px;  
+} 
