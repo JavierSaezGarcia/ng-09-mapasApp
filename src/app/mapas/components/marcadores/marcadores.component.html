@@ -1,1 +1,16 @@
-<p>marcadores works!</p>
+<ul class="list-group">
+    <li class="list-group-item list-group-item-primary text-center"
+    ><a type="button" class="btn btn-primary " (click)="agregarMarcador()">
+        Agregar <span><i class="fa fa-plus"></i></span>
+    </a>
+    </li>
+    <li class="list-group-item"    
+    *ngFor="let marcador of marcadores; let i = index">
+      <a type="button" class="btn btn-primary" (click)="irMarcador( marcador.marker! )" 
+      [ngStyle]="{'background-color': marcador.color,'border-color': marcador.color}">Marker {{ i + 1 }}</a>
+      <a type="button" class="btn btn-danger float-end" (click)="borrarMarcador( i )"  
+      [ngStyle]="{'background-color': marcador.color,'border-color': marcador.color}"><span><i class="fa fa-trash"></i></span></a>
+    </li>
+</ul>
+
+<div #mapa class="mapa"></div>
